@@ -1,0 +1,102 @@
+/* =========================================
+   GRADIENT BACKGROUND
+   ========================================= */
+
+/* Creates a colourful gradient background by blending three colours.
+   Enlarges the background and applies a continuous animation
+   to make the gradient move slowly. */
+
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+ /*.gradient-background {
+  background: linear-gradient(
+    300deg,
+    #00bfff,
+    #ff4c68,
+    #ef8172
+  );
+}*/
+
+ /* #title {
+  display: flex;
+  align-items: flex-end;
+} */
+
+/* =========================================
+   PHONE IMAGE
+   ========================================= */
+
+/* Controls the size and responsiveness of the phone image.
+   Allows the image to shrink to fit its container but prevents
+   it from becoming wider than 340px.
+   Maintains the original image proportions. */
+
+.phone-image {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  display: block;
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   FEATURE ICONS
+   ========================================= */
+
+/* Creates uniform square containers for the three feature icons.
+   Gives each container a width and height of 3rem
+   and slightly rounded corners. */
+
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+}
+
+
+/* =========================================
+   TESTIMONIAL PROFILE IMAGE
+   ========================================= */
+
+/* Controls the appearance of the testimonial profile picture.
+   Sets the image dimensions to 100px by 100px.
+   Makes the image circular using border-radius.
+   Ensures the image fills the circular container without
+   stretching or distorting the photograph. */
+
+.profile-img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
+/* =========================================
+   GRADIENT ANIMATION
+   ========================================= */
+
+/* Defines how the gradient background moves over time.
+   At 0%, the gradient starts at its original position.
+   At 50%, it moves across to the opposite position.
+   At 100%, it returns to its starting position.
+   This creates a continuous back-and-forth animation. */
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
